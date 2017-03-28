@@ -162,11 +162,13 @@
 
             // flag handles
             if (!that.options.handle) that.options.handle = that.element;
-            $(that.options.handle)
-                .addClass("jquery-draggable-handle")
-                .on("mousedown", function(e) {
-                    that._handle_mousedown.call(that, e);
-                });
+            $(that.element)
+                .find(that.options.handle)
+                .add($(that.element).filter(that.options.handle))
+                    .addClass("jquery-draggable-handle")
+                    .on("mousedown", function(e) {
+                        that._handle_mousedown.call(that, e);
+                    });
         },
 
         /**

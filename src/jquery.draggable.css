@@ -1,0 +1,4 @@
+.jquery-draggable { position: relative; }
+.jquery-draggable-handle { cursor: move; }
+
+body.jquery-draggable-dragging, body.jquery-draggable-dragging * { cursor: move !important; }
